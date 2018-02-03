@@ -1,9 +1,5 @@
-  WebScan git:(master) heroku buildpacks
- ▸    heroku-cli: update available from 6.14.39-addc925 to 6.15.19-f4f84f6
-=== biloscan Buildpack URLs
-1. heroku/ruby
-2. https://github.com/heroku/heroku-buildpack-google-chrome.git
-3. https://github.com/heroku/heroku-buildpack-chromedriver.git
-5. https://github.com/ddollar/heroku-buildpack-multi.git
-6. https://github.com/heroku/heroku-buildpack-ruby
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-google-chrome.git
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-chromedriver.git
+heroku buildpacks:add https://github.com/ddollar/heroku-buildpack-multi.git
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby
 
