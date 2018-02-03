@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Urls</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Path</th>
+      <th>Text bilobaba</th>
+      <th>Date bilobaba</th>
+      <th>Last scan text</th>
+      <th>Last scan date</th>
+      <th>Text diff</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @urls.each do |url| %>
+      <tr>
+        <td>
+          <% if url.path.size > 50 %>
+            <%= url.path[0..30]...url.path[url.path.size-20..url.path.size-1] %>
+          <% else %>
+            <%= url.path %>
+          <% end %>
+        </td>
+        <td><%= url.text_bilobaba[0..15] %></td>
+        <td><%= url.date_bilobaba.strftime("%d/%m/%Y %H:%M") %></td>
+        <td><%= url.last_scan_text[0..15] %></td>
+        <td><%= url.last_scan_date.strftime("%d/%m/%Y %H:%M") %></td>
+        <td><%= url.text_diff[0..15] %></td>
+        <td><%= link_to 'Show', url %></td>
+        <td><%= link_to 'Edit', edit_url_path(url) %></td>
+        <td><%= link_to 'Destroy', url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Url', new_url_path %>

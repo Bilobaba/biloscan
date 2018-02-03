@@ -1,0 +1,70 @@
+<style>
+.diff{overflow:auto;}
+.diff ul{background:#fff;overflow:auto;font-size:13px;list-style:none;margin:0;padding:0;display:table;width:100%;}
+.diff del, .diff ins{display:block;text-decoration:none;}
+.diff li{padding:0; display:table-row;margin: 0;height:1em;}
+.diff li.ins{background:#dfd; color:#080}
+.diff li.del{background:#fee; color:#b00}
+.diff li:hover{background:#ffc}
+/* try 'whitespace:pre;' if you don't want lines to wrap */
+.diff del, .diff ins, .diff span{white-space:pre-wrap;font-family:courier;}
+.diff del strong{font-weight:normal;background:#fcc;}
+.diff ins strong{font-weight:normal;background:#9f9;}
+.diff li.diff-comment { display: none; }
+.diff li.diff-block-info { background: none repeat scroll 0 0 gray; }
+</style>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @url.path %>
+</p>
+
+<p>
+  <strong>Text bilobaba:</strong>
+  <%= @url.text_bilobaba %>
+</p>
+
+<p>
+  <strong>Date bilobaba:</strong>
+  <%= @url.date_bilobaba %>
+</p>
+
+<p>
+  <strong>Last scan text:</strong>
+  <%= @url.last_scan_text %>
+</p>
+
+<p>
+  <strong>Last scan date:</strong>
+  <%= @url.last_scan_date %>
+</p>
+
+<p>
+  <strong>Text diff:</strong>
+  <%= @url.text_diff %>
+</p>
+
+<p>
+  <strong>Text diff html:</strong>
+  <% if @url.text_diff_html %>
+  <%= @url.text_diff_html.html_safe %>
+  <% end %>
+</p>
+
+<p>
+  <h4>diff by side</h4>
+  <% if @url.text_diff != "" %>
+   <div style="display: flex;">
+     <div><%= @url.text_diff_html_left.html_safe %></div>
+     <div><%= @url.text_diff_html_right.html_safe %></div>
+   </div>
+   <% end %>
+</p>
+
+<%= link_to 'Scan', scan_path(@url) %> |
+<%= link_to 'Copy', copy_path(@url) %> |
+<%= link_to 'Edit', edit_url_path(@url) %>
+
+<%= debug @string %>

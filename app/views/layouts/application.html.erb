@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebScan</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <p>
+      <%= link_to "Liste des urls", urls_path %>
+      <%= link_to "Scan des urls", scan_all_path %>
+    </p>
+    <%= yield %>
+    <p>
+      <%= link_to "Liste des urls", urls_path %>
+      <%= link_to "Scan des urls", scan_all_path %>
+    </p>
+  </body>
+</html>

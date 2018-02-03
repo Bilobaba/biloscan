@@ -1,0 +1,2 @@
+class Texte < ApplicationRecord
+end

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyString
+  text_bilobaba: MyText
+  date_bilobaba: 2018-01-30 13:17:21
+  last_scan_text: MyText
+  last_scan_date: 2018-01-30 13:17:21
+  text_diff: MyText
+
+two:
+  path: MyString
+  text_bilobaba: MyText
+  date_bilobaba: 2018-01-30 13:17:21
+  last_scan_text: MyText
+  last_scan_date: 2018-01-30 13:17:21
+  text_diff: MyText
