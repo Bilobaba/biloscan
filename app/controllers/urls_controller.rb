@@ -136,7 +136,7 @@ class UrlsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def url_params
-      params.require(:url).permit(:path, :text_bilobaba, :date_bilobaba, :last_scan_text, :last_scan_date, :text_diff)
+      params.require(:url).permit(:path, :text_bilobaba, :date_bilobaba)
     end
 
     def scan_url(url)
