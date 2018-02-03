@@ -56,7 +56,6 @@ class UrlsController < ApplicationController
   # GET /urls/1
   # GET /urls/1.json
   def show
-    @string_show = "Coucou show"
   end
 
   # GET /urls/new
