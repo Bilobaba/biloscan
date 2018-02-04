@@ -14,57 +14,48 @@
 .diff li.diff-block-info { background: none repeat scroll 0 0 gray; }
 </style>
 
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Path:</strong>
-  <%= @url.path %>
-</p>
+  <p>
+    <strong>Path:</strong>
+    <%= @url.path %>
+  </p>
 
-<p>
-  <strong>Text bilobaba:</strong>
-  <%= @url.text_bilobaba %>
-</p>
+  <p>
+    <strong>Date sur bilobaba :</strong>
+    <%= @url.date_bilobaba.in_time_zone("CET") %>
+  </p>
 
-<p>
-  <strong>Date bilobaba:</strong>
-  <%= @url.date_bilobaba %>
-</p>
+  <p>
+    <strong>Date du dernier scan :</strong>
+    <%= @url.last_scan_date.in_time_zone("CET") %>
+  </p>
 
-<p>
-  <strong>Last scan text:</strong>
-  <%= @url.last_scan_text %>
-</p>
+  <p>
+    <strong>Text diff:</strong>
+    <%= @url.text_diff %>
+  </p>
 
-<p>
-  <strong>Last scan date:</strong>
-  <%= @url.last_scan_date %>
-</p>
+  <p>
+    <strong>Difference entre les textes</strong>
+    <% if @url.text_diff_html %>
+    <%= @url.text_diff_html.html_safe %>
+    <% end %>
+  </p>
 
-<p>
-  <strong>Text diff:</strong>
-  <%= @url.text_diff %>
-</p>
+  <p>
+    <strong>Difference en colonne</strong>
+    <% if @url.text_diff.to_s != "" %>
+     <div style="display: flex;">
+       <div><%= @url.text_diff_html_left.html_safe %></div>
+       <div><%= @url.text_diff_html_right.html_safe %></div>
+     </div>
+     <% end %>
+  </p>
 
-<p>
-  <strong>Text diff html:</strong>
-  <% if @url.text_diff_html %>
-  <%= @url.text_diff_html.html_safe %>
-  <% end %>
-</p>
-
-<p>
-  <h4>diff by side</h4>
-  <% if @url.text_diff != "" %>
-   <div style="display: flex;">
-     <div><%= @url.text_diff_html_left.html_safe %></div>
-     <div><%= @url.text_diff_html_right.html_safe %></div>
-   </div>
-   <% end %>
-</p>
-
-<%= link_to 'Scan', scan_path(@url) %> |
-<%= link_to 'Copy', copy_path(@url) %> |
-<%= link_to 'Edit', edit_url_path(@url) %>
-
-<%= debug @string %>
+  <%= link_to 'Scanner cette url', scan_path(@url), class: "btn btn-default" %>
+  <%= link_to 'Copier sur Bilobaba', copy_path(@url), class: "btn btn-default"  %>
+  <%= link_to "Liste des urls", urls_path, class: "btn btn-default" %>
+  <%= link_to "Scanner tous les urls", scan_all_path, class: "btn btn-default" %>
+</div>

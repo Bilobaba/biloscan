@@ -1,47 +1,29 @@
-<%= form_with(model: url, local: true) do |form| %>
-  <% if url.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(url.errors.count, "error") %> prohibited this url from being saved:</h2>
+<div class="container">
+  <%= form_with(model: url, local: true) do |form| %>
+    <% if url.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(url.errors.count, "error") %> prohibited this url from being saved:</h2>
 
-      <ul>
-      <% url.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% url.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= form.label :Url_a_surveiller %>
+      <%= form.text_field :path, id: :url_path, size: 100 %>
+    </div>
+
+    <div class="field">
+      <%= form.label :Commentaire %>
+      <%= form.text_field :comment, id: :url_comment, size: 100 %>
+    </div>
+
+    <div class="actions btn btn-default">
+      <%= form.submit %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :path %>
-    <%= form.text_field :path, id: :url_path %>
-  </div>
-
-  <div class="field">
-    <%= form.label :text_bilobaba %>
-    <%= form.text_area :text_bilobaba, id: :url_text_bilobaba %>
-  </div>
-
-  <div class="field">
-    <%= form.label :date_bilobaba %>
-    <%= form.datetime_select :date_bilobaba, id: :url_date_bilobaba %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_scan_text %>
-    <%= form.text_area :last_scan_text, id: :url_last_scan_text %>
-  </div>
-
-  <div class="field">
-    <%= form.label :last_scan_date %>
-    <%= form.datetime_select :last_scan_date, id: :url_last_scan_date %>
-  </div>
-
-  <div class="field">
-    <%= form.label :text_diff %>
-    <%= form.text_area :text_diff, id: :url_text_diff %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>

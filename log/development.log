@@ -1,0 +1,498 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7450014977672173830)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCommentToUrls (20180203171917)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "urls" ADD "comment" character varying[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7450014977672173830)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7450014977672173830)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7450014977672173830)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-02-03 18:20:54 +0100
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  [1m[36mUrl Load (2.8ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 664ms (Views: 648.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:21:00 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 33ms (Views: 25.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:21:09 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (25.2ms)
+  Rendered urls/new.html.erb within layouts/application (26.9ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:23:35 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (10.1ms)
+  Rendered urls/new.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 49ms (Views: 47.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:23:49 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (10.0ms)
+  Rendered urls/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:25:09 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (11.5ms)
+  Rendered urls/new.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:25:59 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (28.3ms)
+  Rendered urls/new.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:29:01 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (9.3ms)
+  Rendered urls/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:29:14 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (8.2ms)
+  Rendered urls/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:29:44 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (2.7ms)
+  Rendered urls/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2018-02-03 18:29:47 +0100
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 31ms (Views: 28.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/1/edit" for 127.0.0.1 at 2018-02-03 18:29:50 +0100
+Processing by UrlsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/edit.html.erb within layouts/application
+  Rendered urls/_form.html.erb (3.2ms)
+  Rendered urls/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:29:56 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.6ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 30.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:31:00 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:31:34 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 29ms (Views: 26.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:32:27 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 29ms (Views: 25.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:33:02 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:33:21 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:42:31 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/urls/copy/1" for 127.0.0.1 at 2018-02-03 18:42:52 +0100
+Processing by UrlsController#copy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "urls" SET "text_bilobaba" = $1, "date_bilobaba" = $2, "text_diff_html_right" = $3, "text_diff_html_left" = $4, "text_diff_html" = $5, "text_diff" = $6, "updated_at" = $7 WHERE "urls"."id" = $8[0m  [["text_bilobaba", "Bilobaba\nAccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7\nPage Yes\nTexte 7 8 9 10 11 A B C  12 13 14 15 21 22 23\nWonderful world\nligne 3 bis\nligne 6\nligne 7 Super Cool Man !\nligne 9\nLigne 10 Express\nLet's GOOOOOO\nRéalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus"], ["date_bilobaba", "2018-02-02 16:12:41.528527"], ["text_diff_html_right", ""], ["text_diff_html_left", ""], ["text_diff_html", ""], ["text_diff", ""], ["updated_at", "2018-02-03 17:42:52.857374"], ["id", 1]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/urls/1
+Completed 302 Found in 12ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:42:52 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 25ms (Views: 22.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/urls/scan/1" for 127.0.0.1 at 2018-02-03 18:43:20 +0100
+Processing by UrlsController#scan as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.5ms)[0m  [1m[33mUPDATE "urls" SET "last_scan_text" = $1, "last_scan_date" = $2, "text_diff" = $3, "text_diff_html" = $4, "text_diff_html_left" = $5, "text_diff_html_right" = $6, "updated_at" = $7 WHERE "urls"."id" = $8[0m  [["last_scan_text", "Bilobaba\nAccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7\nBiloprocool\nTexte 7 8 9 10 11 A B C  12 13 14 15 21 22 23\nWonderful world\nligne 3 bis\nligne 6\nligne 7 Super Cool Man !\nligne 9\nLigne 10 Express\nLet's GOOOOOO\nBilobabacool\nRéalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus"], ["last_scan_date", "2018-02-03 17:43:24.653668"], ["text_diff", " Bilobaba\n AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7\n+Biloprocool\n Texte 7 8 9 10 11 A B C  12 13 14 15 21 22 23\n Wonderful world\n ligne 3 bis\n ligne 6\n ligne 7 Super Cool Man !\n ligne 9\n Ligne 10 Express\n Let's GOOOOOO\n+Bilobabacool\n Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus\n\\ Pas de fin de ligne à la fin du fichier\n"], ["text_diff_html", "<div class=\"diff\">\n  <ul>\n    <li class=\"unchanged\"><span>Bilobaba</span></li>\n    <li class=\"unchanged\"><span>AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7</span></li>\n    <li class=\"del\"><del><strong>Page Yes</strong></del></li>\n    <li class=\"ins\"><ins><strong>Biloprocool</strong></ins></li>\n    <li class=\"unchanged\"><span>Texte 7 8 9 10 11 A B C  12 13 14 15 21 22 23</span></li>\n    <li class=\"unchanged\"><span>Wonderful world</span></li>\n    <li class=\"unchanged\"><span>ligne 3 bis</span></li>\n    <li class=\"unchanged\"><span>ligne 6</span></li>\n    <li class=\"unchanged\"><span>ligne 7 Super Cool Man !</span></li>\n    <li class=\"unchanged\"><span>ligne 9</span></li>\n    <li class=\"unchanged\"><span>Ligne 10 Express</span></li>\n    <li class=\"unchanged\"><span>Let&#39;s GOOOOOO</span></li>\n    <li class=\"ins\"><ins>Bilobabacool</ins></li>\n    <li class=\"unchanged\"><span>Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus</span></li>\n  </ul>\n</div>\n"], ["text_diff_html_left", "<div class=\"diff\">\n  <ul>\n    <li class=\"unchanged\"><span>Bilobaba</span></li>\n    <li class=\"unchanged\"><span>AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7</span></li>\n    <li class=\"del\"><del><strong>Page Yes</strong></del></li>\n    <li class=\"unchanged\"><span>Texte 7 8 9 10 11 A B C  12 13 14 15 21 22 23</span></li>\n    <li class=\"unchanged\"><span>Wonderful world</span></li>\n    <li class=\"unchanged\"><span>ligne 3 bis</span></li>\n    <li class=\"unchanged\"><span>ligne 6</span></li>\n    <li class=\"unchanged\"><span>ligne 7 Super Cool Man !</span></li>\n    <li class=\"unchanged\"><span>ligne 9</span></li>\n    <li class=\"unchanged\"><span>Ligne 10 Express</span></li>\n    <li class=\"unchanged\"><span>Let&#39;s GOOOOOO</span></li>\n    <li class=\"unchanged\"><span>Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus</span></li>\n  </ul>\n</div>\n"], ["text_diff_html_right", "<div class=\"diff\">\n  <ul>\n    <li class=\"unchanged\"><span>Bilobaba</span></li>\n    <li class=\"unchanged\"><span>AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7</span></li>\n    <li class=\"ins\"><ins><strong>Biloprocool</strong></ins></li>\n    <li class=\"unchanged\"><span>Texte 7 8 9 10 11 A B C  12 13 14 15 21 22 23</span></li>\n    <li class=\"unchanged\"><span>Wonderful world</span></li>\n    <li class=\"unchanged\"><span>ligne 3 bis</span></li>\n    <li class=\"unchanged\"><span>ligne 6</span></li>\n    <li class=\"unchanged\"><span>ligne 7 Super Cool Man !</span></li>\n    <li class=\"unchanged\"><span>ligne 9</span></li>\n    <li class=\"unchanged\"><span>Ligne 10 Express</span></li>\n    <li class=\"unchanged\"><span>Let&#39;s GOOOOOO</span></li>\n    <li class=\"ins\"><ins>Bilobabacool</ins></li>\n    <li class=\"unchanged\"><span>Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus</span></li>\n  </ul>\n</div>\n"], ["updated_at", "2018-02-03 17:43:24.669346"], ["id", 1]]
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/urls/1
+Completed 302 Found in 4790ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:43:24 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:45:53 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 33ms (Views: 27.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:49:08 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 32ms (Views: 29.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:49:30 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:49:49 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:50:12 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:51:15 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:52:14 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:53:52 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:55:02 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:56:09 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 36ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/1" for 127.0.0.1 at 2018-02-03 18:57:17 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2018-02-03 18:57:22 +0100
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2018-02-03 18:57:24 +0100
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 30ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2018-02-03 18:57:58 +0100
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/urls" for 127.0.0.1 at 2018-02-03 18:58:27 +0100
+Processing by UrlsController#index as HTML
+  Rendering urls/index.html.erb within layouts/application
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT "urls".* FROM "urls"[0m
+  Rendered urls/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/new" for 127.0.0.1 at 2018-02-03 18:58:34 +0100
+Processing by UrlsController#new as HTML
+  Rendering urls/new.html.erb within layouts/application
+  Rendered urls/_form.html.erb (2.5ms)
+  Rendered urls/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/urls" for 127.0.0.1 at 2018-02-03 18:58:49 +0100
+Processing by UrlsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ULVqJs4y22ORt6ScBIRY5GquJ72jvM0uaJP3fSXK+rltwNtuv1YkfEPjxmp3V0hT9GM9+7Oc3JImLPqXv21RIQ==", "url"=>{"path"=>"https://sites.google.com/view/bilobaba/page-2", "comment"=>"Page 2"}, "commit"=>"Create Url"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "urls" ("path", "comment", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["path", "https://sites.google.com/view/bilobaba/page-2"], ["comment", "Page 2"], ["created_at", "2018-02-03 17:58:49.951042"], ["updated_at", "2018-02-03 17:58:49.951042"]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/urls/2
+Completed 302 Found in 7ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2018-02-03 18:58:49 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `html_safe' for nil:NilClass
+Did you mean?  html_safe?):
+    58:     <strong>Difference en colonne</strong>
+    59:     <% if @url.text_diff != "" %>
+    60:      <div style="display: flex;">
+    61:        <div><%= @url.text_diff_html_left.html_safe %></div>
+    62:        <div><%= @url.text_diff_html_right.html_safe %></div>
+    63:      </div>
+    64:      <% end %>
+  
+app/views/urls/show.html.erb:61:in `_app_views_urls_show_html_erb__687813135037543932_69980387764320'
+Started PUT "/__web_console/repl_sessions/f4042852431e8fe4fb420e1d42a284a1" for 127.0.0.1 at 2018-02-04 00:37:32 +0100
+Started PUT "/__web_console/repl_sessions/f4042852431e8fe4fb420e1d42a284a1" for 127.0.0.1 at 2018-02-04 00:37:33 +0100
+Started PUT "/__web_console/repl_sessions/f4042852431e8fe4fb420e1d42a284a1" for 127.0.0.1 at 2018-02-04 00:37:35 +0100
+Started PUT "/__web_console/repl_sessions/f4042852431e8fe4fb420e1d42a284a1" for 127.0.0.1 at 2018-02-04 00:37:37 +0100
+Started GET "/urls/2" for 127.0.0.1 at 2018-02-04 00:38:15 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/urls/scan/2" for 127.0.0.1 at 2018-02-04 00:38:20 +0100
+Processing by UrlsController#scan as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "urls" SET "last_scan_text" = $1, "last_scan_date" = $2, "text_diff" = $3, "text_diff_html" = $4, "text_diff_html_left" = $5, "text_diff_html_right" = $6, "updated_at" = $7 WHERE "urls"."id" = $8[0m  [["last_scan_text", "Bilobaba\nAccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7\nPage go !\nTexte 2 \nWonderful\nRéalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus"], ["last_scan_date", "2018-02-03 23:38:29.043468"], ["text_diff", "+Bilobaba\n+AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7\n+Page go !\n+Texte 2 \n+Wonderful\n+Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus\n\\ Pas de fin de ligne à la fin du fichier\n"], ["text_diff_html", "<div class=\"diff\">\n  <ul>\n    <li class=\"ins\"><ins>Bilobaba</ins></li>\n    <li class=\"ins\"><ins>AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7</ins></li>\n    <li class=\"ins\"><ins>Page go !</ins></li>\n    <li class=\"ins\"><ins>Texte 2 </ins></li>\n    <li class=\"ins\"><ins>Wonderful</ins></li>\n    <li class=\"ins\"><ins>Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus</ins></li>\n  </ul>\n</div>\n"], ["text_diff_html_left", "<div class=\"diff\">\n  <ul>\n  </ul>\n</div>\n"], ["text_diff_html_right", "<div class=\"diff\">\n  <ul>\n    <li class=\"ins\"><ins>Bilobaba</ins></li>\n    <li class=\"ins\"><ins>AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7</ins></li>\n    <li class=\"ins\"><ins>Page go !</ins></li>\n    <li class=\"ins\"><ins>Texte 2 </ins></li>\n    <li class=\"ins\"><ins>Wonderful</ins></li>\n    <li class=\"ins\"><ins>Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus</ins></li>\n  </ul>\n</div>\n"], ["updated_at", "2018-02-03 23:38:29.053077"], ["id", 2]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/urls/2
+Completed 302 Found in 8345ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2018-02-04 00:38:29 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.5ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 31ms (Views: 27.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/urls/copy/2" for 127.0.0.1 at 2018-02-04 00:38:34 +0100
+Processing by UrlsController#copy as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "urls" SET "text_bilobaba" = $1, "date_bilobaba" = $2, "text_diff_html_right" = $3, "text_diff_html_left" = $4, "text_diff_html" = $5, "text_diff" = $6, "updated_at" = $7 WHERE "urls"."id" = $8[0m  [["text_bilobaba", "Bilobaba\nAccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7\nPage go !\nTexte 2 \nWonderful\nRéalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus"], ["date_bilobaba", "2018-02-03 23:38:29.043468"], ["text_diff_html_right", ""], ["text_diff_html_left", ""], ["text_diff_html", ""], ["text_diff", ""], ["updated_at", "2018-02-03 23:38:34.495454"], ["id", 2]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/urls/2
+Completed 302 Found in 8ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2018-02-04 00:38:34 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 29ms (Views: 25.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/scan/2" for 127.0.0.1 at 2018-02-04 00:38:39 +0100
+Processing by UrlsController#scan as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.2ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "urls" SET "last_scan_date" = $1, "text_diff_html" = $2, "text_diff_html_left" = $3, "text_diff_html_right" = $4, "updated_at" = $5 WHERE "urls"."id" = $6[0m  [["last_scan_date", "2018-02-03 23:38:42.403093"], ["text_diff_html", "<div class=\"diff\"></div>"], ["text_diff_html_left", "<div class=\"diff\"></div>"], ["text_diff_html_right", "<div class=\"diff\"></div>"], ["updated_at", "2018-02-03 23:38:42.411655"], ["id", 2]]
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/urls/2
+Completed 302 Found in 3412ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2018-02-04 00:38:42 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/scan/2" for 127.0.0.1 at 2018-02-04 00:39:52 +0100
+Processing by UrlsController#scan as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "urls" SET "last_scan_text" = $1, "last_scan_date" = $2, "text_diff" = $3, "text_diff_html" = $4, "text_diff_html_left" = $5, "text_diff_html_right" = $6, "updated_at" = $7 WHERE "urls"."id" = $8[0m  [["last_scan_text", "Bilobaba\nAccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7\nPage go !\nTexte 2 \nWonderful World!\nRéalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus"], ["last_scan_date", "2018-02-03 23:39:55.727526"], ["text_diff", " Bilobaba\n AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7\n Page go !\n Texte 2 \n+Wonderful World!\n Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus\n\\ Pas de fin de ligne à la fin du fichier\n"], ["text_diff_html", "<div class=\"diff\">\n  <ul>\n    <li class=\"unchanged\"><span>Bilobaba</span></li>\n    <li class=\"unchanged\"><span>AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7</span></li>\n    <li class=\"unchanged\"><span>Page go !</span></li>\n    <li class=\"unchanged\"><span>Texte 2 </span></li>\n    <li class=\"del\"><del>Wonderful</del></li>\n    <li class=\"ins\"><ins>Wonderful<strong> World!</strong></ins></li>\n    <li class=\"unchanged\"><span>Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus</span></li>\n  </ul>\n</div>\n"], ["text_diff_html_left", "<div class=\"diff\">\n  <ul>\n    <li class=\"unchanged\"><span>Bilobaba</span></li>\n    <li class=\"unchanged\"><span>AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7</span></li>\n    <li class=\"unchanged\"><span>Page go !</span></li>\n    <li class=\"unchanged\"><span>Texte 2 </span></li>\n    <li class=\"del\"><del>Wonderful</del></li>\n    <li class=\"unchanged\"><span>Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus</span></li>\n  </ul>\n</div>\n"], ["text_diff_html_right", "<div class=\"diff\">\n  <ul>\n    <li class=\"unchanged\"><span>Bilobaba</span></li>\n    <li class=\"unchanged\"><span>AccueilPage 1Page 2Page 3Page 4Page 5Page 6Page 7</span></li>\n    <li class=\"unchanged\"><span>Page go !</span></li>\n    <li class=\"unchanged\"><span>Texte 2 </span></li>\n    <li class=\"ins\"><ins>Wonderful<strong> World!</strong></ins></li>\n    <li class=\"unchanged\"><span>Réalisé avec la nouvelle version de Google Sites, la solution la plus simple pour créer de superbes sites ! Créer un siteSignaler un abus</span></li>\n  </ul>\n</div>\n"], ["updated_at", "2018-02-03 23:39:55.745624"], ["id", 2]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/urls/2
+Completed 302 Found in 3028ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2018-02-04 00:39:55 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.4ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2018-02-04 00:41:03 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/urls/2" for 127.0.0.1 at 2018-02-04 00:43:21 +0100
+Processing by UrlsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUrl Load (0.3ms)[0m  [1m[34mSELECT  "urls".* FROM "urls" WHERE "urls"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering urls/show.html.erb within layouts/application
+  Rendered urls/show.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 39ms (Views: 36.0ms | ActiveRecord: 0.3ms)
+
+
