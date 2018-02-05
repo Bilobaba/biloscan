@@ -2,3 +2,4 @@ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-google-chrome.g
 heroku buildpacks:add https://github.com/heroku/heroku-buildpack-chromedriver.git
 heroku buildpacks:add https://github.com/heroku/heroku-buildpack-ruby
 
+
