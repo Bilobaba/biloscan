@@ -25,14 +25,14 @@
             <%= url.path %>
           <% end %>
         </td>
-        <td><%= url.text_bilobaba[0..15] %></td>
-        <td><%= url.date_bilobaba.strftime("%d/%m/%Y %H:%M") %></td>
-        <td><%= url.last_scan_text[0..15] %></td>
-        <td><%= url.last_scan_date.strftime("%d/%m/%Y %H:%M") %></td>
-        <td><%= url.text_diff[0..15] %></td>
-        <td><%= link_to 'Show', url %></td>
-        <td><%= link_to 'Edit', edit_url_path(url) %></td>
-        <td><%= link_to 'Destroy', url, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td> <% if url.text_bilobaba %> <%= url.text_bilobaba[0..15] %> <% end %> </td>
+        <td> <% if url.date_bilobaba %> <%= url.date_bilobaba.strftime("%d/%m/%y %H:%M") %> <% end %> </td>
+        <td> <% if url.last_scan_text %> <%= url.last_scan_text[0..15] %> <% end %> </td>
+        <td> <% if url.last_scan_date %> <%= url.last_scan_date.strftime("%d/%m/%y %H:%M") %> <% end %> </td>
+        <td> <% if url.text_diff %> <%= url.text_diff[0..15] %> <% end %> </td>
+        <td>  <%= link_to 'Show', url %>  </td>
+        <td>  <%= link_to 'Edit', edit_url_path(url) %></td>
+        <td>  <%= link_to 'Destroy', url, method: :delete, data: { confirm: 'Are you sure?'  } %></td>
       </tr>
     <% end %>
   </tbody>
