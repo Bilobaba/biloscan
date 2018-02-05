@@ -18,9 +18,10 @@
       <tr>
         <td>
           <% if url.path.size > 50 %>
-            <%= url.path[0..30]...url.path[url.path.size-20..url.path.size-1] %>
+            <%= link_to("Coucou", url.path) %>
+            <%= link_to( "url.path[0..30]"+"..."+"url.path[url.path.size-20..url.path.size-1]", url.path, target: "_blank") %>
           <% else %>
-            <%= url.path %>
+            <%= link_to(url.path, url.path, target: "_blank") %>
           <% end %>
         </td>
         <td> <% if url.date_bilobaba %> <%= url.date_bilobaba.strftime("%d/%m/%y %H:%M") %> <% end %> </td>
