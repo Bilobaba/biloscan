@@ -50,7 +50,7 @@ class UrlsController < ApplicationController
   # GET /urls
   # GET /urls.json
   def index
-    @urls = Url.all.order(url_changed: :desc)
+    @urls = Url.all.order(url_changed: :desc).order(:path)
   end
 
   # GET /urls/1
