@@ -121,11 +121,20 @@ class UrlsController < ApplicationController
     redirect_to @url
   end
 
+  def scan_all_task
+    Url.all.each do |u|
+      scan_url(u)
+    end
+  end
+
   def scan_all
     Url.all.each do |u|
       scan_url(u)
     end
-    redirect_to urls_path
+    respond_to do |format|
+      format.html { redirect_to urls_path, notice: 'Urls were successfully scanned.' }
+      format.json { head :no_content }
+    end
   end
 
   private
