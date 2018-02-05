@@ -50,7 +50,7 @@ class UrlsController < ApplicationController
   # GET /urls
   # GET /urls.json
   def index
-    @urls = Url.all
+    @urls = Url.all.order(url_changed: :desc)
   end
 
   # GET /urls/1
@@ -161,6 +161,7 @@ class UrlsController < ApplicationController
 
       url.text_diff_html_left = Diffy::SplitDiff.new(url.text_bilobaba, url.last_scan_text, :format => :html).left
       url.text_diff_html_right = Diffy::SplitDiff.new(url.text_bilobaba, url.last_scan_text, :format => :html).right
+      url.url_changed = (url.text_diff != "") ? 1 : 0
       url.save
       browser.close
 # binding.pry

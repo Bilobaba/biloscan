@@ -42,6 +42,11 @@
   </p>
 
   <p>
+    <strong>Changement détecté :</strong>
+    <% if @url.url_changed == 1 %> <span style="background-color: yellow"> Oui </span> <% else %> Non <% end %>
+  </p>
+
+  <p>
     <strong>Difference entre les textes</strong>
     <% if @url.text_diff_html %>
     <%= @url.text_diff_html.html_safe %>
