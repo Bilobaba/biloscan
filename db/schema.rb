@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20180130124335) do
     t.text "text_diff_html"
     t.text "text_diff_html_left"
     t.text "text_diff_html_right"
-    t.integer "alert", default: 0
+    t.integer "url_changed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

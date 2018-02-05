@@ -11,7 +11,7 @@ class CreateUrls < ActiveRecord::Migration[5.1]
       t.text :text_diff_html
       t.text :text_diff_html_left
       t.text :text_diff_html_right
-      t.integer :changed
+      t.integer :url_changed
       t.timestamps
     end
   end
