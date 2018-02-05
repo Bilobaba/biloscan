@@ -24,12 +24,16 @@
 
   <p>
     <strong>Date sur bilobaba :</strong>
+    <% if @url.date_bilobaba %>
     <%= @url.date_bilobaba.in_time_zone("CET") %>
+    <% end %>
   </p>
 
   <p>
     <strong>Date du dernier scan :</strong>
+    <% if @url.last_scan_date %>
     <%= @url.last_scan_date.in_time_zone("CET") %>
+    <% end %>
   </p>
 
   <p>
