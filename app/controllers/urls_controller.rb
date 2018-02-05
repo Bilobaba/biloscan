@@ -122,6 +122,7 @@ class UrlsController < ApplicationController
   end
 
   def scan_all_task
+    puts 'UrlsController method : scan_all_task'
     Url.all.each do |u|
       scan_url(u)
     end
