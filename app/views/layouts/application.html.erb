@@ -20,6 +20,14 @@
 
   <body>
     <div class="container">
+      <hr>
+        <% if member_signed_in? %>
+          <li><%= link_to "Déconnexion", destroy_member_session_path, method: :DELETE, class: 'menu_item' %> </li>
+        <% else %>
+          <li><%= link_to t(".sign_up", default: "Créer un compte"), new_member_registration_path, title: "Créer un compte", class: 'menu_item' %></li>
+          <li><%= link_to t(".sign_in", default: "Connectez-vous"), new_member_session_path, title: "Connectez-vous", class: 'menu_item' %></li>
+        <% end %>
+      <hr>
     <p>
       </br>
       <%= link_to "Liste des urls", urls_path, class: "btn btn-default" %>

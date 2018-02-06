@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :members
   get 'pages/test1'
 
   get 'pages/test2'
