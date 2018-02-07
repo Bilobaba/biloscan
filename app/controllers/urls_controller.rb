@@ -46,7 +46,7 @@ end
 
 class UrlsController < ApplicationController
   before_action :set_url, only: [:show, :edit, :update, :destroy, :scan, :copy]
-  before_action :authenticate_member! , except: [:index]
+  before_action :authenticate_member! , except: [:index, :show]
 
   # GET /urls
   # GET /urls.json
