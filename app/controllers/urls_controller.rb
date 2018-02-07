@@ -32,7 +32,7 @@ def new_browser
   options.add_argument "headless"
   options.add_argument "disable-gpu"
 
-  # make the browser
+  # make the browser ...
   Watir::Browser.new :chrome, options: options
 end
 
