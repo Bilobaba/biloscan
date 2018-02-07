@@ -23,6 +23,11 @@
   </p>
 
   <p>
+    <strong>Commentaire :</strong>
+    <%= @url.comment %>
+  </p>
+
+  <p>
     <strong>Date sur bilobaba :</strong>
     <% if @url.date_bilobaba %>
     <%= @url.date_bilobaba.in_time_zone("CET") %>
