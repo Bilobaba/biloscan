@@ -6,9 +6,10 @@
   <thead>
     <tr>
       <th>Adresse du site à surveiller</th>
-      <th>Date de la màj sur Bilobaba </th>
-      <th>Dernier scan fait à :</th>
-      <th>Le site a changé</th>
+      <th>MAJ sur Bilobaba </th>
+      <th>Dernier scan </th>
+      <th>Changement</th>
+      <th>Commentaire</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,6 +27,7 @@
         <td> <% if url.date_bilobaba %> <%= url.date_bilobaba.strftime("%d/%m/%y %H:%M") %> <% end %> </td>
         <td> <% if url.last_scan_date %> <%= url.last_scan_date.strftime("%d/%m/%y %H:%M") %> <% end %> </td>
         <td> <% if url.url_changed == 1 %>  <span style="background-color: yellow"> Oui </span>  <% else %> Non <% end %> </td>
+        <td> Commentaire </td>
         <td>  <%= link_to 'Show', url %>  </td>
         <td>  <%= link_to 'Edit', edit_url_path(url) %></td>
         <td>  <%= link_to 'Destroy', url, method: :delete, data: { confirm: 'Are you sure?'  } %></td>
