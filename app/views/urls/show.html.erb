@@ -62,8 +62,8 @@
     <strong>Difference en colonne</strong>
     <% if @url.text_diff.to_s != "" %>
      <div style="display: flex;">
-       <div><%= @url.text_diff_html_left.html_safe %></div>
-       <div><%= @url.text_diff_html_right.html_safe %></div>
+       <div><div><b><u>Ancienne page</u></b></div><div><%= @url.text_diff_html_left.html_safe %></div></div>
+       <div><div><b><u>Nouvelle page</u></b></div><div><%= @url.text_diff_html_right.html_safe %></div></div>
      </div>
      <% end %>
   </p>
