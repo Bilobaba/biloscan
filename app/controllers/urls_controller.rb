@@ -151,6 +151,7 @@ class UrlsController < ApplicationController
     end
 
     def scan_url(url)
+binding.pry
 
       browser = new_browser
       browser.goto url.path
@@ -174,8 +175,8 @@ class UrlsController < ApplicationController
       url.text_diff_html_right = Diffy::SplitDiff.new(url.text_bilobaba, url.last_scan_text, :format => :html).right
       url.url_changed = (url.text_diff != "") ? 1 : 0
       url.save
+binding.pry
       browser.close
-# binding.pry
   end
 
 end
